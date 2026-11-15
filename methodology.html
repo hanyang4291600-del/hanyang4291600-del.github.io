@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>观测与复测方法</title>
+<meta name="description" content="观测与复测方法 — 面向成品油零售、加油站、加气站的可核验 AI 落地与培训问答，事实附来源、日期与口径。">
+<link rel="alternate" type="text/markdown" href="methodology.html.md">
+<link rel="describedby" href="llms.txt">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://hanyang4291600-del.github.io/#organization",
+      "name": "AI进油站",
+      "alternateName": "AI进油站（秦通绿电旗下）",
+      "url": "https://hanyang4291600-del.github.io/",
+      "description": "秦通绿电 2022 年成立于西安；旗下 AI进油站 专注加油站垂直行业：先定口径，再造工具，驻场陪着用；数据从加油机和原始凭证算起；红线：数据不出域、AI 不碰金额、双跑比对后再切换。",
+      "foundingDate": "2022",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "areaServed": "CN",
+          "availableLanguage": [
+            "zh-CN"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://hanyang4291600-del.github.io/#service",
+      "name": "加油站 AI 企业落地、FDE 驻场交付、AI 应用培训、运营陪跑与经营咨询",
+      "serviceType": "加油站与成品油零售企业 AI 落地咨询 / FDE 前沿部署 / 岗位培训",
+      "provider": {
+        "@id": "https://hanyang4291600-del.github.io/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "CN"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "成品油零售企业、加油站、加气站、能源集团销售分公司"
+      },
+      "description": "先定口径，再造工具，然后驻场陪着用。已交付油站 AI 财务对账、油站 AI 数据分析、油站 AI 客服、油站 AI 电话营销、自动视频切片五类工具，本地化部署。红线：数据不出域、AI 不碰金额、双跑比对后再切换。"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hanyang4291600-del.github.io/#website",
+      "url": "https://hanyang4291600-del.github.io/",
+      "name": "AI进油站",
+      "publisher": {
+        "@id": "https://hanyang4291600-del.github.io/#organization"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<style>
+:root{--ink:#16283C;--ink2:#3C5269;--muted:#6D8195;--line:#DCE4EC;--bg:#F5F8FB;
+--card:#FFFFFF;--brand:#0E5A78;--brand2:#12869A;--accent:#D8722F;--ok:#1F7A5C;
+--warn:#B4451F;--soft:#EAF2F6;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+ font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-decoration:none;border-bottom:1px solid rgba(14,90,120,.28)}
+a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{background:linear-gradient(112deg,#0B3A52 0%,#0E5A78 55%,#12869A 100%);
+ color:#fff;position:relative;overflow:hidden}
+header.top::after{content:"";position:absolute;inset:0;opacity:.13;
+ background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
+ background-size:34px 34px;pointer-events:none}
+header.top .wrap{position:relative;z-index:2;padding-top:26px;padding-bottom:30px}
+.brand{font-size:14px;letter-spacing:.16em;text-transform:uppercase;opacity:.82;margin:0 0 18px}
+h1.hero{font-size:34px;line-height:1.28;font-weight:760;letter-spacing:-.02em;margin:0 0 12px;color:#fff}
+.lead{font-size:15.5px;color:rgba(255,255,255,.88);margin:0;max-width:720px}
+nav.bar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;
+ box-shadow:0 1px 8px rgba(16,42,66,.05)}
+nav.bar .wrap{display:flex;gap:22px;flex-wrap:wrap;padding-top:11px;padding-bottom:11px;font-size:14px}
+nav.bar a{border:0;font-weight:600;color:var(--ink2)}
+nav.bar a:hover{color:var(--accent)}
+main{padding:34px 0 20px}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:38px 42px;box-shadow:0 6px 26px rgba(16,42,66,.055)}
+.paper h2{font-size:23px;font-weight:730;letter-spacing:-.01em;margin:34px 0 14px;
+ padding-bottom:9px;border-bottom:2px solid var(--soft)}
+.paper h2:first-child{margin-top:0}
+.paper h3{font-size:18px;font-weight:700;margin:26px 0 10px;color:var(--brand)}
+.paper h4{font-size:16px;margin:20px 0 8px}
+.paper p{margin:0 0 14px;color:var(--ink2)}
+.paper strong{color:var(--ink);font-weight:700}
+blockquote{margin:18px 0;padding:14px 18px;background:var(--soft);
+ border-left:4px solid var(--brand2);border-radius:0 8px 8px 0;color:var(--ink2);font-size:15px}
+blockquote p{margin:0}
+code{font-family:var(--mono);font-size:.9em;background:#EEF3F7;padding:2px 6px;border-radius:4px;color:#0B4F69}
+pre{background:#0C2E42;color:#DAEBF3;padding:16px 18px;border-radius:9px;overflow:auto;font-size:13px;line-height:1.7}
+pre code{background:none;color:inherit;padding:0}
+.tw{overflow-x:auto;margin:16px 0 20px;border:1px solid var(--line);border-radius:9px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#F0F6F9;color:var(--ink);font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even){background:#FAFCFD}
+tbody tr:hover{background:#F2F8FA}
+ul,ol{margin:0 0 16px;padding-left:24px;color:var(--ink2)}
+li{margin:6px 0}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.template-banner{background:#FFF4E6;border:1px solid #F0C48A;color:#7A3E0A;
+ padding:11px 16px;border-radius:9px;font-size:14px;margin:0 0 22px;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0 0 26px}
+.kpi{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi .n{font-family:var(--mono);font-size:23px;font-weight:750;color:var(--brand)}
+.kpi .l{font-size:12.5px;color:var(--muted);margin-top:2px}
+footer{margin-top:26px;padding:24px 0 40px;color:var(--muted);font-size:13px;
+ border-top:1px solid var(--line);text-align:center}
+footer p{margin:4px 0}
+@media(max-width:640px){.paper{padding:24px 18px}h1.hero{font-size:26px}
+ nav.bar .wrap{gap:14px}th,td{padding:9px 10px;font-size:13.5px}}
+@media print{header.top,nav.bar,.template-banner,footer{display:none}
+ body{background:#fff;font-size:11pt}.paper{border:0;box-shadow:none;padding:0}
+ a{color:var(--ink);border:0}.tw{overflow:visible}table{font-size:9pt}
+ h2{page-break-after:avoid}tr{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <p class="brand">GEO · 可核验问答</p>
+  <h1 class="hero">观测与复测方法</h1>
+  <p class="lead">面向成品油零售、加油站、加气站企业的公开问答资料。每条事实附可点开来源、发布日期、统计口径与「一手 / 二手」层级。</p>
+</div></header>
+<nav class="bar"><div class="wrap"><a href="index.html">首页</a><a href="faq.html">常见问题</a><a href="answers/index.html">问答索引</a><a href="methodology.html">方法</a><a href="llms.txt">llms.txt</a></div></nav>
+<main class="wrap">
+  <article class="paper">
+    <h1 id="观测与复测方法">观测与复测方法</h1>
+</article>
+  <footer>
+    <p>本页事实均可点开复核 · 不承诺收录 / 排名 / 效果</p>
+    <p>回答层与索引层分开记 · 三态「有 / 无 / 未检测」· 未检测 ≠ 未收录</p>
+    <p><a href="llms.txt">llms.txt</a> · <a href="methodology.html.md">本页 Markdown 镜像</a></p>
+  </footer>
+</main>
+</body>
+</html>
