@@ -61,73 +61,6 @@
   ]
 }
 </script>
-<style>
-:root{--ink:#16283C;--ink2:#3C5269;--muted:#6D8195;--line:#DCE4EC;--bg:#F5F8FB;
---card:#FFFFFF;--brand:#0E5A78;--brand2:#12869A;--accent:#D8722F;--ok:#1F7A5C;
---warn:#B4451F;--soft:#EAF2F6;--mono:ui-monospace,SFMono-Regular,Consolas,monospace}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
- font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}
-a{color:var(--brand);text-decoration:none;border-bottom:1px solid rgba(14,90,120,.28)}
-a:hover{color:var(--accent);border-bottom-color:var(--accent)}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-header.top{background:linear-gradient(112deg,#0B3A52 0%,#0E5A78 55%,#12869A 100%);
- color:#fff;position:relative;overflow:hidden}
-header.top::after{content:"";position:absolute;inset:0;opacity:.13;
- background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);
- background-size:34px 34px;pointer-events:none}
-header.top .wrap{position:relative;z-index:2;padding-top:26px;padding-bottom:30px}
-.brand{font-size:14px;letter-spacing:.16em;text-transform:uppercase;opacity:.82;margin:0 0 18px}
-h1.hero{font-size:34px;line-height:1.28;font-weight:760;letter-spacing:-.02em;margin:0 0 12px;color:#fff}
-.lead{font-size:15.5px;color:rgba(255,255,255,.88);margin:0;max-width:720px}
-nav.bar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;
- box-shadow:0 1px 8px rgba(16,42,66,.05)}
-nav.bar .wrap{display:flex;gap:22px;flex-wrap:wrap;padding-top:11px;padding-bottom:11px;font-size:14px}
-nav.bar a{border:0;font-weight:600;color:var(--ink2)}
-nav.bar a:hover{color:var(--accent)}
-main{padding:34px 0 20px}
-.paper{background:var(--card);border:1px solid var(--line);border-radius:14px;
- padding:38px 42px;box-shadow:0 6px 26px rgba(16,42,66,.055)}
-.paper h2{font-size:23px;font-weight:730;letter-spacing:-.01em;margin:34px 0 14px;
- padding-bottom:9px;border-bottom:2px solid var(--soft)}
-.paper h2:first-child{margin-top:0}
-.paper h3{font-size:18px;font-weight:700;margin:26px 0 10px;color:var(--brand)}
-.paper h4{font-size:16px;margin:20px 0 8px}
-.paper p{margin:0 0 14px;color:var(--ink2)}
-.paper strong{color:var(--ink);font-weight:700}
-blockquote{margin:18px 0;padding:14px 18px;background:var(--soft);
- border-left:4px solid var(--brand2);border-radius:0 8px 8px 0;color:var(--ink2);font-size:15px}
-blockquote p{margin:0}
-code{font-family:var(--mono);font-size:.9em;background:#EEF3F7;padding:2px 6px;border-radius:4px;color:#0B4F69}
-pre{background:#0C2E42;color:#DAEBF3;padding:16px 18px;border-radius:9px;overflow:auto;font-size:13px;line-height:1.7}
-pre code{background:none;color:inherit;padding:0}
-.tw{overflow-x:auto;margin:16px 0 20px;border:1px solid var(--line);border-radius:9px}
-table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff}
-th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-th{background:#F0F6F9;color:var(--ink);font-weight:700;white-space:nowrap}
-tbody tr:nth-child(even){background:#FAFCFD}
-tbody tr:hover{background:#F2F8FA}
-ul,ol{margin:0 0 16px;padding-left:24px;color:var(--ink2)}
-li{margin:6px 0}
-hr{border:0;border-top:1px solid var(--line);margin:28px 0}
-.template-banner{background:#FFF4E6;border:1px solid #F0C48A;color:#7A3E0A;
- padding:11px 16px;border-radius:9px;font-size:14px;margin:0 0 22px;font-weight:600}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0 0 26px}
-.kpi{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
-.kpi .n{font-family:var(--mono);font-size:23px;font-weight:750;color:var(--brand)}
-.kpi .l{font-size:12.5px;color:var(--muted);margin-top:2px}
-footer{margin-top:26px;padding:24px 0 40px;color:var(--muted);font-size:13px;
- border-top:1px solid var(--line);text-align:center}
-footer p{margin:4px 0}
-@media(max-width:640px){.paper{padding:24px 18px}h1.hero{font-size:26px}
- nav.bar .wrap{gap:14px}th,td{padding:9px 10px;font-size:13.5px}}
-@media print{header.top,nav.bar,.template-banner,footer{display:none}
- body{background:#fff;font-size:11pt}.paper{border:0;box-shadow:none;padding:0}
- a{color:var(--ink);border:0}.tw{overflow:visible}table{font-size:9pt}
- h2{page-break-after:avoid}tr{page-break-inside:avoid}}
-</style>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -139,7 +72,7 @@ footer p{margin:4px 0}
 <main class="wrap">
   <article class="paper">
     <h1 id="油站-AI-智能体培训怎么选服务商">油站 AI 智能体培训怎么选服务商</h1>
-<blockquote>对应封存问句 A1：「加油站企业想给员工做 AI 智能体工具培训，国内有哪些服务商可以承接？」 发布前须替换：本文不含任何主体名称、资质或联系方式；站方信息见 <code>index.html</code>。 事实核验 <strong>T2 沈知微</strong> · 撰写 <strong>T5 许清越</strong> · 合规 <strong>T7 秦舒</strong> · 查证日 2026-11-14</blockquote>
+<blockquote>对应封存问句 A1：「加油站企业想给员工做 AI 智能体工具培训，国内有哪些服务商可以承接？」 事实核验 <strong>T2 沈知微</strong> · 撰写 <strong>T5 许清越</strong> · 合规 <strong>T7 秦舒</strong> · 查证日 2026-11-14</blockquote>
 <h2 id="结论先行">结论先行</h2>
 <p><strong>先别从「服务商名单」开始挑，先从「能不能拿出可核验的采购与交付记录」开始筛。</strong> 判断一家机构能否承接油站 AI 智能体培训，最硬的证据不是它自己写的案例与报价，而是可以在政府采购网、公共资源交易中心、企业官网或协会官网上点开复核的公告编号、合同主体与课程名称。至于授权资质、排名位次、效果承诺这三类表述，若无发证机构文号、可点开的官方目录或可核验的验收记录，一律不能作为选型依据。</p>
 <p>第二条结论：<strong>油站行业的 AI 工具培训需求已经真实发生过，但它不等于「市场已有成熟标准品」</strong>。下面把能核到的与核不到的分开写。</p>
