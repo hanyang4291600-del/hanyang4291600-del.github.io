@@ -4,18 +4,18 @@
 ## Pages
 - [常见问题与口径说明](https://hanyang4291600-del.github.io/faq.html): 选服务商三件事 / FDE 岗位职责 / 需求在哪看
 - [方法与口径](https://hanyang4291600-del.github.io/methodology.html): 两层观测与三态口径
-- [问答索引](https://hanyang4291600-del.github.io/answers/index.html): 24 条封存问句
-- [AI 智能体培训怎么选服务商](https://hanyang4291600-del.github.io/answers/a1-ai-agent-training.html): 附一手来源
-- [站长培训怎么落地](https://hanyang4291600-del.github.io/answers/b1-station-manager-training.html): 附一手来源
-- [FDE 是什么岗位](https://hanyang4291600-del.github.io/answers/c1-fde-energy.html): 附一手来源
-- [AI 落地需求哪里找](https://hanyang4291600-del.github.io/answers/d1-ai-landing.html): 附一手来源
+- [问答索引](https://hanyang4291600-del.github.io/answers-index.html): 24 条封存问句
+- [AI 智能体培训怎么选服务商](https://hanyang4291600-del.github.io/a1-ai-agent-training.html): 附一手来源
+- [站长培训怎么落地](https://hanyang4291600-del.github.io/b1-station-manager-training.html): 附一手来源
+- [FDE 是什么岗位](https://hanyang4291600-del.github.io/c1-fde-energy.html): 附一手来源
+- [AI 落地需求哪里找](https://hanyang4291600-del.github.io/d1-ai-landing.html): 附一手来源
 
 ## Optional
 - [首页全文 Markdown 镜像](https://hanyang4291600-del.github.io/index.md): 已上线营销单页（业务线、已交付工具、红线）
 - [常见问题与口径说明 镜像](https://hanyang4291600-del.github.io/faq.html.md): 供 AI 全文引用
 - [方法与口径 镜像](https://hanyang4291600-del.github.io/methodology.html.md): 供 AI 全文引用
-- [问答索引 镜像](https://hanyang4291600-del.github.io/answers/index.html.md): 供 AI 全文引用
-- [AI 智能体培训怎么选服务商 镜像](https://hanyang4291600-del.github.io/answers/a1-ai-agent-training.html.md): 供 AI 全文引用
-- [站长培训怎么落地 镜像](https://hanyang4291600-del.github.io/answers/b1-station-manager-training.html.md): 供 AI 全文引用
-- [FDE 是什么岗位 镜像](https://hanyang4291600-del.github.io/answers/c1-fde-energy.html.md): 供 AI 全文引用
-- [AI 落地需求哪里找 镜像](https://hanyang4291600-del.github.io/answers/d1-ai-landing.html.md): 供 AI 全文引用
+- [问答索引 镜像](https://hanyang4291600-del.github.io/answers-index.html.md): 供 AI 全文引用
+- [AI 智能体培训怎么选服务商 镜像](https://hanyang4291600-del.github.io/a1-ai-agent-training.html.md): 供 AI 全文引用
+- [站长培训怎么落地 镜像](https://hanyang4291600-del.github.io/b1-station-manager-training.html.md): 供 AI 全文引用
+- [FDE 是什么岗位 镜像](https://hanyang4291600-del.github.io/c1-fde-energy.html.md): 供 AI 全文引用
+- [AI 落地需求哪里找 镜像](https://hanyang4291600-del.github.io/d1-ai-landing.html.md): 供 AI 全文引用
